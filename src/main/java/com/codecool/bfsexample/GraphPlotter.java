@@ -11,7 +11,7 @@ import java.util.List;
 
 public class GraphPlotter {
 
-    public static void plot(List<UserNode> points) {
+    public static Graph plot(List<UserNode> points) {
         Graph graph = new SingleGraph("Friend circle");
         // add all nodes to the graph. IDs are filled automatically by the DB at this point.
         List<UserNode> allEdges = new ArrayList<>();
@@ -31,6 +31,7 @@ public class GraphPlotter {
             }
         }
         graph.display();
+        return graph;
 
     }
 }
